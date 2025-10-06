@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan If Else</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Latihan Logika Keputusan (if - else)</h1>
+        <p>Masukkan nilai ujian, lalu klik tombol untuk cek status kelulusan</p>
+
+        <input type="number" id="nilai" placeholder="Masukkan nilai (0-100)">
+        <button class="btn-run" onclick="cekKelulusan()">Cek Kelulusan</button>
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+        function cekKelulusan() {
+            let nilai = document.getElementById("nilai").value;
+            let hasil = document.getElementById("hasil");
+
+            if (nilai >= 75) {
+                hasil.textContent = "Selamat, kamu lulus!";
+                console.log("Nilai:", nilai, "- Status: LULUS");
+            } else {
+                hasil.textContent = "Maaf, kamu belum lulus.";
+                console.log("Nilai:", nilai, "- Status: TIDAK LULUS");
+            }
+        }
+    </script>
+</body>
+</html>
